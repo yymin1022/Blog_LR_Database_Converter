@@ -14,7 +14,7 @@ dataFile.close()
 
 num = 1
 for dataItem in dataJson:
-    doc_ref = db.collection(u"Blog Post").document(str(num).zfill(5))
+    doc_ref = db.collection(u"blog").document(str(num).zfill(5))
     doc_ref.set({
         u"isPinned": dataItem["pinned"],
         u"date": dataItem["postDate"],
@@ -30,7 +30,7 @@ dataFile.close()
 
 num = 1
 for dataItem in dataJson:
-    doc_ref = db.collection(u"Project Post").document(str(num).zfill(5))
+    doc_ref = db.collection(u"project").document(str(num).zfill(5))
     doc_ref.set({
         u"isPinned": dataItem["pinned"],
         u"date": dataItem["postDate"],
@@ -46,7 +46,7 @@ dataFile.close()
 
 num = 1
 for dataItem in dataJson:
-    doc_ref = db.collection(u"Solving Post").document(str(num).zfill(5))
+    doc_ref = db.collection(u"solving").document(str(num).zfill(5))
     doc_ref.set({
         u"isPinned": dataItem["pinned"],
         u"date": dataItem["postDate"],
