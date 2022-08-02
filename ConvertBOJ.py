@@ -58,4 +58,4 @@ for post in postList:
             u"tag": ["BOJ", "C++"],
             u"title": title,
             u"url": post,
-        })
+        })8
