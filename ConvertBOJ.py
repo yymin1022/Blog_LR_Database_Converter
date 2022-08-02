@@ -51,7 +51,7 @@ for post in postList:
         soup = BeautifulSoup(html, 'html.parser')
         title = soup.title.string.replace('번:', '. ')
 
-        doc_ref = db.collection(u"solving").document(str(problem).zfill(5))
+        doc_ref = db.collection(u"solving").document(problem)
         doc_ref.set({
             u"isPinned": True,
             u"date": f"BOJ {problem}",
